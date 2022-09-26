@@ -1,0 +1,243 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--Blue: #4f7df3;
+	--Pale-Blue: hsl(223, 100%, 88%);
+	--Pale-Blue2: hsl(225, 44%, 86%);
+	--Light-Red: hsl(354, 100%, 66%);
+	--Gray: hsl(0, 0%, 59%);
+	--Light-Gray: hsl(0, 0%, 74%);
+	--Very-Dark-Blue: hsl(209, 33%, 12%);
+	--white: hsl(0, 0%, 100%);
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 2rem;
+}
+
+// ---------------------------
+.attribution {
+    margin-top: 2em;
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: var(--Blue);
+}
+// ---------------------------
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1.5em;
+	text-align: center;
+	min-height: 100vh;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.logo {
+    padding: 4em 0 2em;
+	width: 60px;
+}
+
+.headline,
+.footer {
+	color: var(--Gray);
+}
+
+.headline {
+	font-size: 2.4rem;
+	font-weight: 300;
+
+	span {
+		font-weight: bold;
+		color: var(--Very-Dark-Blue);
+	}
+}
+
+.text {
+	margin: 1.5em 0 2.5em;
+	font-size: 1.5rem;
+}
+
+.email-section {
+	width: 100%;
+    height: 170px;
+	margin: 0 auto;
+}
+
+input,
+.notify-btn {
+	width: 92%;
+	border-radius: 100px;
+}
+
+input {
+	padding: 1em 2em;
+	border: 1px solid var(--Pale-Blue2);
+	outline: none;
+    transition: border 0.3s;
+
+    &:focus {
+        border: 1px solid var(--Light-Gray);
+    }
+
+	&::placeholder {
+		color: var(--Pale-Blue2);
+	}
+}
+
+.notify-btn {
+	padding: 1.1em 0;
+	margin-top: 0.8em;
+	border: none;
+	background-color: var(--Blue);
+	color: var(--white);
+	font-weight: 600;
+    box-shadow: 0px 9px 20px -5px rgba(143, 173, 255, 1);
+	transition: background-color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--Pale-Blue);
+	}
+}
+
+.error {
+    display: none;
+	margin-bottom: 1.4em;
+	color: var(--Light-Red);
+	font-size: 1.25rem;
+	font-style: italic;
+}
+
+.dashboard-img {
+	width: 100%;
+}
+
+.media {
+	margin: 7.2em 0 1.5em;
+	display: flex;
+	gap: 1em;
+
+	&__circle {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		color: var(--Blue);
+		border: 1px solid var(--Pale-Blue2);
+		border-radius: 50%;
+		transition: background-color 0.3s, color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--Blue);
+			color: var(--white);
+		}
+	}
+}
+
+.fab {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.fa-twitter {
+	font-size: 1.8rem;
+}
+
+.fa-instagram {
+	font-size: 2.2rem;
+}
+
+.footer {
+	font-size: 1.2rem;
+}
+
+
+@media (min-width: 1100px) {
+    .main {
+        max-width: 700px;
+    }
+
+    .logo {
+        padding-top: 0;
+        width: 80px;
+    }
+
+    .headline {
+        font-size: 4.8rem;
+    }
+
+    .text {
+        font-size: 2rem;
+        margin: 1em 0 2em;
+    }
+
+    .email-section {
+        display: flex;
+        height: 130px;
+    }
+
+    input, .notify-btn {
+        font-size: 1.6rem;
+        height: 40%;
+    }
+
+    .input {
+        width: 70%;
+    }
+
+    .error {
+        text-align: left;
+        padding-left: 4em;
+        margin-top: 0.6em;
+    }
+
+    .notify-btn {
+        margin: 0;
+        width: 30%;
+        font-size: 1.6rem;
+        font-weight: 300;
+        padding: 0;
+    }
+
+    .media {
+        margin: 3em 0 0;
+
+        &__circle {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .fa-facebook-f {
+        font-size: 1.4rem;
+    }
+
+    .fa-twitter {
+        font-size: 1.4rem;
+    }
+
+    .fa-instagram {
+        font-size: 1.8rem;
+    }
+    
+    .footer {
+        margin-top: 2.2em;
+    }
+}
